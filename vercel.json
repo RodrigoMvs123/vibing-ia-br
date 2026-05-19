@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "buildCommand": "pnpm build",
+  "outputDirectory": "dist",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "envPrefix": [
+    "VITE_",
+    "DATABASE_URL",
+    "JWT_SECRET",
+    "EMAIL_USER",
+    "EMAIL_PASSWORD",
+    "EMAIL_FROM",
+    "OAUTH_SERVER_URL",
+    "VITE_OAUTH_PORTAL_URL",
+    "VITE_APP_ID",
+    "OWNER_NAME",
+    "OWNER_OPEN_ID",
+    "BUILT_IN_FORGE_API_URL",
+    "BUILT_IN_FORGE_API_KEY",
+    "VITE_FRONTEND_FORGE_API_URL",
+    "VITE_FRONTEND_FORGE_API_KEY"
+  ],
+  "functions": {
+    "server/index.ts": {
+      "runtime": "nodejs20.x",
+      "memory": 1024,
+      "maxDuration": 60,
+      "handler": "dist/index.js"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "server/index.ts",
+      "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"]
+    },
+    {
+      "src": "/(.*)",
+      "dest": "dist/public/index.html",
+      "status": 200
+    }
+  ]
+}
