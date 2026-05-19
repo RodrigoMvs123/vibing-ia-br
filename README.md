@@ -1,5 +1,7 @@
 # vibing.ia.br - Premium Domain Sales Landing Page
 
+🌐 **Live:** [https://vibing.ia.br](https://vibing.ia.br)
+
 Um site moderno e elegante para venda do domínio premium **vibing.ia.br**, desenvolvido com React, Tailwind CSS e Node.js/Express. O site apresenta design minimalista em preto e branco, suporte bilíngue (português/inglês), e integração completa com sistemas de pagamento e contato.
 
 ## 🎯 Visão Geral do Projeto
@@ -48,7 +50,7 @@ Este projeto é uma landing page de venda de domínio premium posicionada para o
 - **TypeScript**: Type safety no servidor
 
 ### Deployment
-- **Vercel**: Plataforma de deployment recomendada
+- **Vercel**: Plataforma de deployment — [https://vibing.ia.br](https://vibing.ia.br)
 - **GitHub**: Controle de versão
 
 ## 📋 Estrutura do Projeto
